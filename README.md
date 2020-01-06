@@ -358,3 +358,7 @@ sam package --template-file template-sandbox.yaml --output-template-file package
 **[deploy]**
 
 sam deploy --template-file /mnt/c/Users/jwu/projects/dev/sam/es-cleanup-app/packaged.yaml --stack-name ESCleanup --profile *your_aws_profile*--region eu-west-2 --capabilities CAPABILITY_IAM
+
+## Scheduled Events with CloudWatch
+
+rule: Deleting ES index regularly, 14 days
