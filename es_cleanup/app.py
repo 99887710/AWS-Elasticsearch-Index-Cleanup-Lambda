@@ -4,7 +4,7 @@ from elasticsearch import Elasticsearch, RequestsHttpConnection
 import curator
 import os
 
-host = "search-voodoo-prod-kzhnusnkwaszd7cmd3fcmgegte.eu-west-2.es.amazonaws.com" # For example, search-my-domain.region.es.amazonaws.com
+host = "Your ES domain" # For example, search-my-domain.region.es.amazonaws.com
 region = 'eu-west-2' # For example, us-west-1
 service = 'es'
 credentials = boto3.Session().get_credentials()
