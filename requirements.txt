@@ -1,0 +1,4 @@
+boto3==1.10.39
+requests_aws4auth==0.9
+elasticsearch==7.1.0
+elasticsearch-curator==5.8.1

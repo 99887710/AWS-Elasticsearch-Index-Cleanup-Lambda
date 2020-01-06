@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "es-cleanup-app\nSAM Template for sam-app - ES Cleanup \n"
+Globals:
+  Function:
+    Environment:
+      Variables:
+        EsHost: search-voodoo-prod-kzhnusnkwaszd7cmd3fcmgegte.eu-west-2.es.amazonaws.com
+    Timeout: 10
+Outputs:
+  EsCleanupFunction:
+    Description: ES Cleanup Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - EsCleanupFunction
+      - Arn
+Resources:
+  EsCleanupFunction:
+    Properties:
+      CodeUri: s3://sam-bucket-escleanup-ldn-prod/e8481c3deec8f2e6c50ce580911fa26b
+      Handler: app.lambda_handler
+      Runtime: python2.7
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
